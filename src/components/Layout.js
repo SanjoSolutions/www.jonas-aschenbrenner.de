@@ -7,7 +7,6 @@ import Link from "next/link.js"
 
 export function Layout({ children }) {
   const pathname = usePathname()
-  console.log("pathname", pathname)
 
   const pathToOtherLanguage = retrievePathToOtherLanguage(pathname)
 
