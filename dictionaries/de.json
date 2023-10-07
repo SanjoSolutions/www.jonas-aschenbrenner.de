@@ -5,6 +5,34 @@
     "commercialRegisterEntry": "Handelsregistereintrag"
   },
   "layout": {
-    "switchLanguage": "Show page in English"
+    "about": "Über",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "gitHub": "GitHub",
+    "switchLanguage": "Website in English",
+    "imprint": "Impressum",
+    "privacyPolicy": "Datenschutzerklärung",
+    "credits": "Credits",
+    "madeWithLove": "Mit ❤ erstellt."
+  },
+  "Credit": {
+    "showLicense": "Lizenz anzeigen",
+    "hideLicense": "Lizenz ausblenden",
+    "showInfo": "Info anzeigen",
+    "hideInfo": "Info ausblenden",
+    "by": "von",
+    "website": "Webseite"
+  },
+  "contact": {
+    "contact": "Kontakt",
+    "success": "Die Kontaktanfrage wurde erfolgreich übertragen.",
+    "thereWasAnError": "Es gab einen Fehler.",
+    "pleaseContactUsViaEmail": "Kontaktieren Sie uns bitte per E-Mail",
+    "sorryForTheInconvenience": "Bitte entschuldigung Sie die Umstände.",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "submit": "Absenden"
   }
 }

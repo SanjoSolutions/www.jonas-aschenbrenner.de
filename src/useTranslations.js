@@ -1,7 +1,6 @@
-import { determineLanguage } from "@/determineLanguage.js"
-import { usePathname } from "next/navigation.js"
-import en from "../dictionaries/en.json"
+import { useLanguage } from "@/useLanguage.js"
 import de from "../dictionaries/de.json"
+import en from "../dictionaries/en.json"
 
 const languages = new Map([
   ["de", de],
@@ -9,8 +8,7 @@ const languages = new Map([
 ])
 
 export function useTranslations(key) {
-  const pathname = usePathname()
-  const language = determineLanguage(pathname)
+  const language = useLanguage()
   if (language) {
     const translations = languages.get(language)
     return translations ? translations[key] || {} : {}

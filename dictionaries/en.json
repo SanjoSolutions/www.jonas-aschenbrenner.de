@@ -5,6 +5,34 @@
     "commercialRegisterEntry": "Commercial register entry"
   },
   "layout": {
-    "switchLanguage": "Seite auf Deutsch anzeigen"
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "gitHub": "GitHub",
+    "switchLanguage": "Webseite auf Deutsch",
+    "imprint": "Imprint",
+    "privacyPolicy": "Privacy policy",
+    "credits": "Credits",
+    "madeWithLove": "Made with ❤."
+  },
+  "Credit": {
+    "showLicense": "Show license",
+    "hideLicense": "Hide license",
+    "showInfo": "Show info",
+    "hideInfo": "Hide info",
+    "by": "by",
+    "website": "Website"
+  },
+  "contact": {
+    "contact": "Contact",
+    "success": "The contact request has been successfully transmitted.",
+    "thereWasAnError": "There was an error.",
+    "pleaseContactUsViaEmail": "Please contact us via email",
+    "sorryForTheInconvenience": "Sorry for the inconvenience.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Submit"
   }
 }
