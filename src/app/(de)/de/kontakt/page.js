@@ -1,3 +1,3 @@
 export {
   default,
-} from "../../../components/pages/contact/contact.js"
+} from "../../../../components/pages/contact/contact.js"
