@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wwwsanjosolutionscom-staging-210128-authRole",
+      "UnauthRoleArn": "arn:aws:iam::543098890276:role/amplify-wwwsanjosolutionscom-staging-210128-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::543098890276:role/amplify-wwwsanjosolutionscom-staging-210128-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-wwwsanjosolutionscom-staging-210128-deployment",
+      "UnauthRoleName": "amplify-wwwsanjosolutionscom-staging-210128-unauthRole",
+      "StackName": "amplify-wwwsanjosolutionscom-staging-210128",
+      "StackId": "arn:aws:cloudformation:eu-central-1:543098890276:stack/amplify-wwwsanjosolutionscom-staging-210128/af7e91f0-6554-11ee-b7e0-02c4da7cd679",
+      "AmplifyAppId": "d2l3l6kuqz6zvp"
+    }
+  }
+}
