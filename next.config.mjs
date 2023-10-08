@@ -1,4 +1,5 @@
 import createMDX from "@next/mdx"
+import classNames from "rehype-class-names"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeHighlight from "rehype-highlight"
 import remarkGfm from "remark-gfm"
@@ -20,6 +21,7 @@ const withMDX = createMDX({
         { target: "_blank", rel: ["noopener", "noreferrer"] },
       ],
       rehypeHighlight,
+      [classNames, { blockquote: "blockquote" }],
     ],
   },
 })
