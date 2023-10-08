@@ -7,7 +7,7 @@
   "layout": {
     "about": "Über",
     "services": "Dienstleistungen",
-    "contact": "Kontakt",
+    "contact": "Kontaktieren",
     "gitHub": "GitHub",
     "switchLanguage": "Website in English",
     "imprint": "Impressum",
@@ -24,7 +24,7 @@
     "website": "Webseite"
   },
   "contact": {
-    "contact": "Kontakt",
+    "title": "Kontaktieren",
     "success": "Die Kontaktanfrage wurde erfolgreich übertragen.",
     "thereWasAnError": "Es gab einen Fehler.",
     "pleaseContactUsViaEmail": "Kontaktieren Sie uns bitte per E-Mail",
@@ -33,6 +33,6 @@
     "email": "E-Mail",
     "subject": "Betreff",
     "message": "Nachricht",
-    "submit": "Absenden"
+    "contact": "Kontaktieren"
   }
 }

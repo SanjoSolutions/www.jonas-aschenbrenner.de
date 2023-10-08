@@ -9,7 +9,7 @@ const pages = {
   },
   contact: {
     en: "/contact",
-    de: "/de/kontakt",
+    de: "/de/kontaktieren",
   },
   imprint: {
     en: "/imprint",

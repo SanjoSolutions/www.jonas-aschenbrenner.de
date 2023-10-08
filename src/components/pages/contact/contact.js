@@ -189,7 +189,7 @@ export default function Contact() {
         </div>
         <div className="text-end">
           <button type="submit" className="btn btn-primary">
-            { translations.submit }</button>
+            { translations.contact }</button>
         </div>
       </form>
     </>

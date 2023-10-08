@@ -4,6 +4,7 @@ import { ExternalNavLink } from "@/components/ExternalNavLink.js"
 import { FooterNavigationItem } from "@/components/FooterNavigationItem.js"
 import { NavigationItem } from "@/components/NavigationItem.js"
 import { retrievePathToOtherLanguage } from "@/pages.js"
+import { usePathForPageId } from "@/usePathForPageId.js"
 import { useTranslations } from "@/useTranslations.js"
 import Link from "next/link.js"
 import { usePathname } from "next/navigation.js"
@@ -19,7 +20,11 @@ export function Layout({ children }) {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href="/">Sanjo Solutions</a>
+          <a
+            className="navbar-brand"
+            href={ usePathForPageId("homepage") }
+          >Sanjo Solutions
+          </a>
           <button
             className="navbar-toggler"
             type="button"

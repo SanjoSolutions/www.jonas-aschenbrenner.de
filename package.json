@@ -20,6 +20,8 @@
     "react": "^18",
     "react-dom": "^18",
     "rehype-external-links": "^3.0.0",
-    "remark-gfm": "^3.0.1"
+    "rehype-highlight": "^7.0.0",
+    "remark-gfm": "^3.0.1",
+    "remark-heading-id": "^1.0.1"
   }
 }

@@ -24,7 +24,7 @@
     "website": "Website"
   },
   "contact": {
-    "contact": "Contact",
+    "title": "Contact",
     "success": "The contact request has been successfully transmitted.",
     "thereWasAnError": "There was an error.",
     "pleaseContactUsViaEmail": "Please contact us via email",
@@ -33,6 +33,6 @@
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
-    "submit": "Submit"
+    "contact": "Contact"
   }
 }

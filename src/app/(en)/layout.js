@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css"
 import "@/bootstrap.js"
 import { Layout } from "@/components/Layout.js"
+import "highlight.js/styles/github.css"
 
 export const metadata = {
   title: "Sanjo Solutions - Software development with focus on JavaScript, HTML and CSS",

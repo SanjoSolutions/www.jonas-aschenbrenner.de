@@ -1,6 +1,8 @@
 import createMDX from "@next/mdx"
 import rehypeExternalLinks from "rehype-external-links"
+import rehypeHighlight from "rehype-highlight"
 import remarkGfm from "remark-gfm"
+import remarkHeadingId from "remark-heading-id"
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
@@ -11,12 +13,13 @@ const nextConfig = {
 
 const withMDX = createMDX({
   options: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, [remarkHeadingId, { defaults: true }]],
     rehypePlugins: [
       [
         rehypeExternalLinks,
         { target: "_blank", rel: ["noopener", "noreferrer"] },
       ],
+      rehypeHighlight,
     ],
   },
 })

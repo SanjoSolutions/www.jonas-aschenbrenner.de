@@ -1,3 +1,5 @@
+import "./TextSection.css"
+
 export function TextSection({ children }) {
-  return <div style={ { maxWidth: "39rem" } }>{ children }</div>
+  return <div className="text-section">{ children }</div>
 }
