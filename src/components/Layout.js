@@ -67,7 +67,10 @@ export function Layout({ children }) {
             <div className="col-12 col-md-auto text-center text-md-start made-with-love">
               <span className="text-muted">{ translations.madeWithLove }</span>
             </div>
-            <div className="col-12 col-md text-end mt-4 mt-md-0">
+            <div
+              className="col-12 col-md text-end mt-4 mt-md-0"
+              style={ { marginRight: "40px" } }
+            >
               <ol className="footer-link-list list-inline mb-0">
                 { pathToOtherLanguage &&
                   <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">
