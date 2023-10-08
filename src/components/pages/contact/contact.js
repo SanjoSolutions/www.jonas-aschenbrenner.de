@@ -30,6 +30,10 @@ export default function Contact() {
             $message.value) }`
         $errorMessage.classList.remove("d-none")
         $successMessage.classList.add("d-none")
+        $errorMessage.scrollIntoView(
+          true,
+          { behavior: "smooth", block: "start", inline: "nearest" },
+        )
       }
 
       async function onSubmit(event) {
@@ -49,6 +53,10 @@ export default function Contact() {
           if (response.status === 200) {
             $successMessage.classList.remove("d-none")
             $errorMessage.classList.add("d-none")
+            $successMessage.scrollIntoView(
+              true,
+              { behavior: "smooth", block: "start", inline: "nearest" },
+            )
             clearForm()
           } else {
             showError()
