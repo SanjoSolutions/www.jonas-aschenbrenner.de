@@ -49,7 +49,7 @@ export default function Contact() {
           if (response.status === 200) {
             $successMessage.classList.remove("d-none")
             $errorMessage.classList.add("d-none")
-            clearSavedFormData()
+            clearForm()
           } else {
             showError()
           }
@@ -87,8 +87,10 @@ export default function Contact() {
         }
       }
 
-      function clearSavedFormData() {
-        localStorage.removeItem(localStorageKey)
+      function clearForm() {
+        $form.querySelector("#subject").value = ""
+        $form.querySelector("#message").value = ""
+        saveFormData()
       }
 
       function serializeFormDataToJSON() {
