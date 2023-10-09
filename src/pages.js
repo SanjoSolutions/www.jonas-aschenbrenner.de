@@ -3,6 +3,9 @@ const pages = {
     en: "/",
     de: "/de",
   },
+  "page-builder": {
+    en: "/page-builder",
+  },
   services: {
     en: "/services",
     de: "/de/dienstleistungen",

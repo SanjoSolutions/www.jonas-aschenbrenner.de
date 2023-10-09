@@ -38,6 +38,10 @@ export function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              { process.env.NEXT_PUBLIC_FEATURE_PAGE_BUILDER &&
+                <li className="nav-item">
+                  <NavigationItem pageId="page-builder">{ translations.pageBuilder }</NavigationItem>
+                </li> }
               <li className="nav-item">
                 <NavigationItem pageId="about">{ translations.about }</NavigationItem>
               </li>

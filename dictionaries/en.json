@@ -5,6 +5,7 @@
     "commercialRegisterEntry": "Commercial register entry"
   },
   "layout": {
+    "pageBuilder": "Page Builder",
     "about": "About",
     "services": "Services",
     "contact": "Contact",
