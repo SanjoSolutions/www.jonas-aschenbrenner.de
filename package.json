@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ca": "node scripts/create-article.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.427.0",
@@ -25,5 +26,8 @@
     "rehype-highlight": "^7.0.0",
     "remark-gfm": "^3.0.1",
     "remark-heading-id": "^1.0.1"
+  },
+  "devDependencies": {
+    "@sanjo/write-file": "^1.0.0"
   }
 }
