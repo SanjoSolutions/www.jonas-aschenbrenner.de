@@ -20,8 +20,10 @@ export function Layout({ children }) {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href={usePathForPageId("homepage")}>
-            Sanjo Solutions
+          <a
+            className="navbar-brand"
+            href={ usePathForPageId("homepage") }
+          >Sanjo Solutions
           </a>
           <button
             className="navbar-toggler"
@@ -36,37 +38,21 @@ export function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              {process.env.NEXT_PUBLIC_FEATURE_PAGE_BUILDER && (
+              { process.env.NEXT_PUBLIC_FEATURE_PAGE_BUILDER &&
                 <li className="nav-item">
-                  <NavigationItem pageId="page-builder">
-                    {translations.pageBuilder}
-                  </NavigationItem>
-                </li>
-              )}
+                  <NavigationItem pageId="page-builder">{ translations.pageBuilder }</NavigationItem>
+                </li> }
               <li className="nav-item">
-                <NavigationItem pageId="about">
-                  {translations.about}
-                </NavigationItem>
+                <NavigationItem pageId="about">{ translations.about }</NavigationItem>
               </li>
               <li className="nav-item">
-                <NavigationItem pageId="services">
-                  {translations.services}
-                </NavigationItem>
+                <NavigationItem pageId="services">{ translations.services }</NavigationItem>
               </li>
               <li className="nav-item">
-                <NavigationItem pageId="contact">
-                  {translations.contact}
-                </NavigationItem>
+                <NavigationItem pageId="contact">{ translations.contact }</NavigationItem>
               </li>
               <li className="nav-item">
-                <ExternalNavLink href="https://tasks.sanjo-solutions.com">
-                  {translations.tasks}
-                </ExternalNavLink>
-              </li>
-              <li className="nav-item">
-                <ExternalNavLink href="https://github.com/SanjoSolutions/">
-                  {translations.gitHub}
-                </ExternalNavLink>
+                <ExternalNavLink href="https://github.com/SanjoSolutions/">{ translations.gitHub }</ExternalNavLink>
               </li>
             </ul>
           </div>
@@ -74,44 +60,38 @@ export function Layout({ children }) {
       </nav>
 
       <main className="flex-shrink-0 py-3">
-        <div className="container">{children}</div>
+        <div className="container">
+          { children }
+        </div>
       </main>
 
       <footer className="footer mt-auto py-3 bg-light">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-auto text-center text-md-start made-with-love">
-              <span className="text-muted">{translations.madeWithLove}</span>
+              <span className="text-muted">{ translations.madeWithLove }</span>
             </div>
             <div
               className="col-12 col-md text-end mt-4 mt-md-0"
-              style={{ marginRight: "40px" }}
+              style={ { marginRight: "40px" } }
             >
               <ol className="footer-link-list list-inline mb-0">
-                {pathToOtherLanguage && (
+                { pathToOtherLanguage &&
                   <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">
+
                     <Link
-                      href={retrievePathToOtherLanguage(pathname)}
-                      title={translations.switchLanguage}
-                    >
-                      {translations.switchLanguage}
-                    </Link>
-                  </li>
-                )}
+                      href={ retrievePathToOtherLanguage(pathname) }
+                      title={ translations.switchLanguage }
+                    >{ translations.switchLanguage }</Link>
+                  </li> }
                 <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">
-                  <FooterNavigationItem pageId="imprint">
-                    {translations.imprint}
-                  </FooterNavigationItem>
+                  <FooterNavigationItem pageId="imprint">{ translations.imprint }</FooterNavigationItem>
                 </li>
                 <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">
-                  <FooterNavigationItem pageId="privacy-policy">
-                    {translations.privacyPolicy}
-                  </FooterNavigationItem>
+                  <FooterNavigationItem pageId="privacy-policy">{ translations.privacyPolicy }</FooterNavigationItem>
                 </li>
                 <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">
-                  <FooterNavigationItem pageId="credits">
-                    {translations.credits}
-                  </FooterNavigationItem>
+                  <FooterNavigationItem pageId="credits">{ translations.credits }</FooterNavigationItem>
                 </li>
               </ol>
             </div>
