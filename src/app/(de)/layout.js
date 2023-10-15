@@ -3,9 +3,11 @@ import "@/bootstrap.js"
 import { Layout } from "@/components/Layout.js"
 import "highlight.js/styles/github.css"
 import { TawkMessenger } from "@/components/TawkMessenger.js"
+import "../../styles.css"
 
 export const metadata = {
-  title: "Sanjo Solutions - Softwareentwicklung mit Fokus auf JavaScript, HTML and CSS",
+  title:
+    "Sanjo Solutions - Softwareentwicklung mit Fokus auf JavaScript, HTML and CSS",
   description: "Softwareentwicklung mit Fokus auf JavaScript, HTML und CSS.",
 }
 
@@ -13,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de" className="h-100">
       <body className="d-flex flex-column h-100">
-        <Layout>{ children }</Layout>
+        <Layout>{children}</Layout>
 
         <TawkMessenger
           propertyId="65228de46fcfe87d54b7a225"
