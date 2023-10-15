@@ -37,15 +37,21 @@
 }
 
 .credit__license {
-  white-space: pre;
   display: none;
   margin-top: 0.5rem;
   overflow: auto;
 }
 
+.credit__license > *:last-child {
+  margin-bottom: 0;
+}
+
 .credit__info {
-  white-space: pre;
   display: none;
   margin-top: 0.5rem;
   overflow: auto;
+}
+
+.credit__info > *:last-child {
+  margin-bottom: 0;
 }

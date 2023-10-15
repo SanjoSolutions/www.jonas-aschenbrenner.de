@@ -29,49 +29,55 @@ export function Credit({ name, author, url, license, info, licenseUrl }) {
     <div className="credit rounded bg-secondary-subtle">
       <div className="credit__header">
         <div className="credit__head-line">
-            <span className="credit__name">{ name }</span
-            >
-          { author && <>
-            <span className="credit__by"> { translations.by } </span>
-            <span className="credit__author">{ author }</span>
-          </> }
+          <span className="credit__name">{name}</span>
+          {author && (
+            <>
+              <span className="credit__by"> {translations.by} </span>
+              <span className="credit__author">{author}</span>
+            </>
+          )}
         </div>
         <div className="credit__links">
           <a
             className="credit__toggle-show-license"
-            href={ licenseUrl || "#" }
-            target={ licenseUrl && "_blank" }
-            onClick={ !licenseUrl ? onClickShowLicense : null }
-          >{ isLicenseShown ?
-            translations.hideLicense :
-            translations.showLicense }
-          </a
+            href={licenseUrl || "#"}
+            target={licenseUrl && "_blank"}
+            onClick={!licenseUrl ? onClickShowLicense : null}
           >
-          { info &&
+            {isLicenseShown
+              ? translations.hideLicense
+              : translations.showLicense}
+          </a>
+          {info && (
             <a
               className="credit__toggle-show-info"
               href="#"
-              onClick={ onClickToggleShowInfo }
-            >{ isInfoShown ? translations.hideInfo : translations.showInfo }
-            </a
-            > }
-          <a
-            className="credit__url"
-            href={ url }
-            target="_blank"
-          >{ translations.website }</a>
+              onClick={onClickToggleShowInfo}
+            >
+              {isInfoShown ? translations.hideInfo : translations.showInfo}
+            </a>
+          )}
+          <a className="credit__url" href={url} target="_blank">
+            {translations.website}
+          </a>
         </div>
       </div>
-      { license &&
+      {license && (
         <div
           className="credit__license"
-          style={ { display: isLicenseShown ? "block" : "none" } }
-        >{ license.trim() }</div> }
-      { info &&
+          style={{ display: isLicenseShown ? "block" : "none" }}
+        >
+          {license}
+        </div>
+      )}
+      {info && (
         <div
           className="credit__info"
-          style={ { display: isInfoShown ? "block" : "none" } }
-        >{ info.trim() }</div> }
+          style={{ display: isInfoShown ? "block" : "none" }}
+        >
+          {info}
+        </div>
+      )}
     </div>
   )
 }

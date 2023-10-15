@@ -1,5 +1,7 @@
 import "./page.css"
 import { Credit } from "@/app/(en)/credits/Credit.js"
+import { MDXRemote } from "next-mdx-remote/rsc"
+import { mdxOptions } from "@/mdxOptions.mjs"
 
 export const metadata = {
   title: "Credits",
@@ -10,7 +12,7 @@ const credits = [
     name: "Bootstrap",
     author: "The Bootstrap Authors",
     url: "https://getbootstrap.com/",
-    license: `Code:
+    license: `__Code:__
 
 The MIT License (MIT)
 
@@ -34,7 +36,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-Documentation: https://creativecommons.org/licenses/by/3.0/
+__Documentation:__ [https://creativecommons.org/licenses/by/3.0/](https://creativecommons.org/licenses/by/3.0/)
 `,
   },
   {
@@ -81,14 +83,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   },
 ]
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <h1>Credits</h1>
 
-      { credits.map(credit => (
-        <Credit { ...credit } />
-      )) }
+      {credits.map((credit, index) => (
+        <Credit
+          key={index}
+          {...credit}
+          license={
+            credit.license && (
+              <MDXRemote
+                source={credit.license.trim()}
+                options={{ mdxOptions }}
+              />
+            )
+          }
+          info={
+            credit.info && (
+              <MDXRemote source={credit.info.trim()} options={{ mdxOptions }} />
+            )
+          }
+        />
+      ))}
     </>
   )
 }
