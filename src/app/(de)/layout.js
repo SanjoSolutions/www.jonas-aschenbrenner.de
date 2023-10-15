@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css"
+import "../../custom.scss"
 import "@/bootstrap.js"
 import { Layout } from "@/components/Layout.js"
 import "highlight.js/styles/github.css"
