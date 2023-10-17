@@ -8,6 +8,7 @@ export function ArtGallery() {
         "/art/document (2).jpg",
         "/art/document (3).jpg",
         "/art/document (4).jpg",
+        "/art/document (5).jpg",
       ]}
     />
   )
