@@ -10,9 +10,9 @@ const pages = {
     en: "/services",
     de: "/de/dienstleistungen",
   },
-  art: {
-    en: "/art",
-    de: "/de/kunst",
+  articles: {
+    en: "/articles",
+    de: "/de/artikel",
   },
   contact: {
     en: "/contact",

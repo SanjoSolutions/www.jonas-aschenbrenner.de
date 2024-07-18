@@ -59,6 +59,11 @@ export function Layout({ children }) {
                 </NavigationItem>
               </li>
               <li className="nav-item">
+                <NavigationItem pageId="articles">
+                  {translations.articles}
+                </NavigationItem>
+              </li>
+              <li className="nav-item">
                 <ExternalNavLink href="https://github.com/SanjoSolutions/">
                   {translations.gitHub}
                 </ExternalNavLink>
