@@ -7,10 +7,10 @@
 /* eslint-disable */
 import * as React from "react";
 import { Button, Flex, Grid } from "@aws-amplify/ui-react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { fetchByPath, validateField } from "./utils";
-import { API } from "aws-amplify";
+import { fetchByPath, getOverrideProps, validateField } from "./utils";
+import { generateClient } from "aws-amplify/api";
 import { createChat } from "../graphql/mutations";
+const client = generateClient();
 export default function ChatCreateForm(props) {
   const {
     clearOnSuccess = true,
@@ -82,8 +82,8 @@ export default function ChatCreateForm(props) {
               modelFields[key] = null;
             }
           });
-          await API.graphql({
-            query: createChat,
+          await client.graphql({
+            query: createChat.replaceAll("__typename", ""),
             variables: {
               input: {
                 ...modelFields,
