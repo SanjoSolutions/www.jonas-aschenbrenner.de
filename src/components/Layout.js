@@ -54,9 +54,6 @@ export function Layout({ children }) {
                 </NavigationItem>
               </li>
               <li className="nav-item">
-                <NavigationItem pageId="art">{translations.art}</NavigationItem>
-              </li>
-              <li className="nav-item">
                 <NavigationItem pageId="contact">
                   {translations.contact}
                 </NavigationItem>
