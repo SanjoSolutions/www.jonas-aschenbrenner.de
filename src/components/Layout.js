@@ -75,9 +75,6 @@ export function Layout({ children }) {
       <footer className="footer mt-auto py-3 bg-light">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-auto text-center text-md-start made-with-love">
-              <span className="text-muted">{translations.madeWithLove}</span>
-            </div>
             <div
               className="col-12 col-md text-end mt-4 mt-md-0"
               style={{ marginRight: "40px" }}
