@@ -68,7 +68,7 @@ export function Layout({ children }) {
         </div>
       </nav>
 
-      <main className="flex-shrink-0 py-3">
+      <main className="flex-shrink-0">
         <div className="container">{children}</div>
       </main>
 

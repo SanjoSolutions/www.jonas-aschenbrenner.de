@@ -2,6 +2,7 @@
 
 import { useTranslations } from "@/useTranslations.js"
 import { useEffect, useRef } from "react"
+import { FirstHeader } from "../../FirstHeader.js"
 
 const localStorageKey = "contact-form"
 const backendUrl = "/api/process-contact-request"
@@ -12,120 +13,122 @@ export default function Contact() {
 
   const formRef = useRef(null)
 
-  useEffect(
-    function () {
-      const $form = formRef.current
-      const $successMessage = document.getElementById("success-message")
-      const $errorMessage = document.getElementById("error-message")
-      const $mailToLink = document.getElementById("mail-to")
-      const $submitButton = $form.querySelector("button[type=\"submit\"]")
+  useEffect(function () {
+    const $form = formRef.current
+    const $successMessage = document.getElementById("success-message")
+    const $errorMessage = document.getElementById("error-message")
+    const $mailToLink = document.getElementById("mail-to")
+    const $submitButton = $form.querySelector('button[type="submit"]')
 
-      loadFormData()
+    loadFormData()
 
-      function showError() {
-        const $subject = document.getElementById("subject")
-        const $message = document.getElementById("message")
-        $mailToLink.href = "mailto:" + receiverEmail +
-          `?subject=${ encodeURIComponent($subject.value) }&body=${ encodeURIComponent(
-            $message.value) }`
-        $errorMessage.classList.remove("d-none")
-        $successMessage.classList.add("d-none")
-        $errorMessage.scrollIntoView(
-          true,
-          { behavior: "smooth", block: "start", inline: "nearest" },
-        )
-      }
+    function showError() {
+      const $subject = document.getElementById("subject")
+      const $message = document.getElementById("message")
+      $mailToLink.href =
+        "mailto:" +
+        receiverEmail +
+        `?subject=${encodeURIComponent(
+          $subject.value,
+        )}&body=${encodeURIComponent($message.value)}`
+      $errorMessage.classList.remove("d-none")
+      $successMessage.classList.add("d-none")
+      $errorMessage.scrollIntoView(true, {
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      })
+    }
 
-      async function onSubmit(event) {
-        event.preventDefault()
+    async function onSubmit(event) {
+      event.preventDefault()
 
-        $submitButton.disabled = true
-        try {
-          const response = await fetch(backendUrl, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-            },
-            body: serializeFormDataToJSON(),
+      $submitButton.disabled = true
+      try {
+        const response = await fetch(backendUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: serializeFormDataToJSON(),
+        })
+
+        if (response.status === 200) {
+          $successMessage.classList.remove("d-none")
+          $errorMessage.classList.add("d-none")
+          $successMessage.scrollIntoView(true, {
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
           })
+          clearForm()
+        } else {
+          showError()
+        }
+      } catch (error) {
+        console.error(error)
+        showError()
+      } finally {
+        $submitButton.disabled = false
+      }
+    }
 
-          if (response.status === 200) {
-            $successMessage.classList.remove("d-none")
-            $errorMessage.classList.add("d-none")
-            $successMessage.scrollIntoView(
-              true,
-              { behavior: "smooth", block: "start", inline: "nearest" },
-            )
-            clearForm()
-          } else {
-            showError()
+    $form.addEventListener("submit", onSubmit)
+
+    $form.addEventListener("keyup", saveFormData)
+    $form.addEventListener("change", saveFormData)
+
+    function saveFormData() {
+      localStorage.setItem(localStorageKey, serializeFormDataToJSON())
+    }
+
+    function loadFormData() {
+      const item = localStorage.getItem(localStorageKey)
+      if (item) {
+        try {
+          const data = JSON.parse(item)
+          for (const [key, value] of Object.entries(data)) {
+            const $input = $form.querySelector(`[name="${key}"]`)
+            if ($input) {
+              $input.value = value
+            }
           }
         } catch (error) {
           console.error(error)
-          showError()
-        } finally {
-          $submitButton.disabled = false
         }
       }
+    }
 
-      $form.addEventListener("submit", onSubmit)
+    function clearForm() {
+      $form.querySelector("#subject").value = ""
+      $form.querySelector("#message").value = ""
+      saveFormData()
+    }
 
-      $form.addEventListener("keyup", saveFormData)
-      $form.addEventListener("change", saveFormData)
+    function serializeFormDataToJSON() {
+      const data = new FormData($form)
+      return JSON.stringify(Object.fromEntries(data.entries()))
+    }
 
-      function saveFormData() {
-        localStorage.setItem(localStorageKey, serializeFormDataToJSON())
-      }
-
-      function loadFormData() {
-        const item = localStorage.getItem(localStorageKey)
-        if (item) {
-          try {
-            const data = JSON.parse(item)
-            for (const [key, value] of Object.entries(data)) {
-              const $input = $form.querySelector(`[name="${ key }"]`)
-              if ($input) {
-                $input.value = value
-              }
-            }
-          } catch (error) {
-            console.error(error)
-          }
-        }
-      }
-
-      function clearForm() {
-        $form.querySelector("#subject").value = ""
-        $form.querySelector("#message").value = ""
-        saveFormData()
-      }
-
-      function serializeFormDataToJSON() {
-        const data = new FormData($form)
-        return JSON.stringify(Object.fromEntries(data.entries()))
-      }
-
-      return () => {
-        $form.removeEventListener("submit", onSubmit)
-        $form.removeEventListener("keyup", saveFormData)
-        $form.removeEventListener("change", saveFormData)
-      }
-    },
-    [],
-  )
+    return () => {
+      $form.removeEventListener("submit", onSubmit)
+      $form.removeEventListener("keyup", saveFormData)
+      $form.removeEventListener("change", saveFormData)
+    }
+  }, [])
 
   return (
     <>
-      <h1 className="mt-3 mt-md-5">{ translations.title }</h1>
+      <FirstHeader>{translations.title}</FirstHeader>
 
-      <form ref={ formRef }>
+      <form ref={formRef}>
         <div
           id="success-message"
           className="alert alert-success d-none"
           role="alert"
         >
-          { translations.success }
+          {translations.success}
         </div>
 
         <div
@@ -133,8 +136,8 @@ export default function Contact() {
           className="alert alert-danger d-none"
           role="alert"
         >
-          { translations.thereWasAnError }{ " " }
-          { translations.pleaseContactUsViaEmail } (
+          {translations.thereWasAnError} {translations.pleaseContactUsViaEmail}{" "}
+          (
           <a
             id="mail-to"
             href="mailto:jonas@sanjo-solutions.com"
@@ -142,13 +145,13 @@ export default function Contact() {
           >
             jonas@sanjo-solutions.com
           </a>
-          ).{ " " }
-          { translations.sorryForTheInconvenience }
+          ). {translations.sorryForTheInconvenience}
         </div>
 
         <div className="mb-3">
           <label htmlFor="subject" className="form-label">
-            { translations.subject }</label>
+            {translations.subject}
+          </label>
           <input
             type="text"
             className="form-control"
@@ -160,7 +163,8 @@ export default function Contact() {
         </div>
         <div className="mb-3">
           <label htmlFor="message" className="form-label">
-            { translations.message }</label>
+            {translations.message}
+          </label>
           <textarea
             rows="5"
             className="form-control"
@@ -173,7 +177,8 @@ export default function Contact() {
           <div className="col-12 col-md-6">
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
-                { translations.name }</label>
+                {translations.name}
+              </label>
               <input
                 type="text"
                 className="form-control"
@@ -186,7 +191,8 @@ export default function Contact() {
           <div className="col-12 col-md-6">
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
-                { translations.email }</label>
+                {translations.email}
+              </label>
               <input
                 type="email"
                 className="form-control"
@@ -199,7 +205,8 @@ export default function Contact() {
         </div>
         <div className="text-end">
           <button type="submit" className="btn btn-primary">
-            { translations.contact }</button>
+            {translations.contact}
+          </button>
         </div>
       </form>
     </>

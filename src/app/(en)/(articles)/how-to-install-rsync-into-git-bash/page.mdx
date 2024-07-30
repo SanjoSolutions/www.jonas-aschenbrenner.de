@@ -1,10 +1,11 @@
+import { Article } from "../../../../components/Article.js"
+
 export const metadata = {
-  title: 'How to install rsync into Git Bash',
+  title: "How to install rsync into Git Bash",
 }
 
-# How to install rsync into Git Bash
-
-Download [rsync](https://repo.msys2.org/msys/x86_64/rsync-3.2.7-2-x86_64.pkg.tar.zst).
+<Article title="How to install rsync into Git Bash">
+  Download [rsync](https://repo.msys2.org/msys/x86_64/rsync-3.2.7-2-x86_64.pkg.tar.zst).
 
 Download [lib-xxhash](https://repo.msys2.org/msys/x86_64/libxxhash-0.8.2-1-x86_64.pkg.tar.zst).
 
@@ -14,3 +15,4 @@ Extract `rsync.exe` (which is inside the `usr/bin` folder of the downloaded rsyn
 
 Extract `msys-xxhash-0.dll` (which is inside the `usr/bin` folder of the downloaded lib-xxhash archive) into `C:\Program Files\Git\usr\bin`.
 
+</Article>

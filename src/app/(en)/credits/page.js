@@ -2,6 +2,7 @@ import "./page.css"
 import { Credit } from "@/app/(en)/credits/Credit.js"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { mdxOptions } from "@/mdxOptions.mjs"
+import { FirstHeader } from "../../../components/FirstHeader.js"
 
 export const metadata = {
   title: "Credits",
@@ -86,7 +87,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 export default async function Page() {
   return (
     <>
-      <h1>Credits</h1>
+      <FirstHeader>Credits</FirstHeader>
 
       {credits.map((credit, index) => (
         <Credit
