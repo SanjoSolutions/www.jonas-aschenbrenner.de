@@ -59,7 +59,7 @@ export function Layout({ children }) {
                 </NavigationItem>
               </li>
               <li className="nav-item">
-                <ExternalNavLink href="https://github.com/SanjoSolutions/">
+                <ExternalNavLink href="https://github.com/Sanjo-Solutions">
                   {translations.gitHub}
                 </ExternalNavLink>
               </li>
