@@ -122,6 +122,16 @@ export default function Contact() {
     <>
       <FirstHeader>{translations.title}</FirstHeader>
 
+      <h2>{translations.viaEmail}</h2>
+
+      <p>
+        <a href="mailto:jonas@sanjo-solutions.com" target="_blank">
+          jonas@sanjo-solutions.com
+        </a>
+      </p>
+
+      <h2>{translations.viaForm}</h2>
+
       <form ref={formRef}>
         <div
           id="success-message"
@@ -203,7 +213,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="text-end">
+        <div className="text-end mb-3">
           <button type="submit" className="btn btn-primary">
             {translations.contact}
           </button>

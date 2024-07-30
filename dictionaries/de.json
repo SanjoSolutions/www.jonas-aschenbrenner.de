@@ -33,6 +33,8 @@
     "email": "E-Mail",
     "subject": "Betreff",
     "message": "Nachricht",
-    "contact": "Kontaktieren"
+    "contact": "Kontaktieren",
+    "viaEmail": "Per E-Mail",
+    "viaForm": "Per Formular"
   }
 }

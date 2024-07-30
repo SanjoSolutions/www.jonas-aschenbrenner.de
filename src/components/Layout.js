@@ -1,5 +1,6 @@
 "use client"
 
+import "./Layout.css"
 import { ExternalNavLink } from "@/components/ExternalNavLink.js"
 import { FooterNavigationItem } from "@/components/FooterNavigationItem.js"
 import { NavigationItem } from "@/components/NavigationItem.js"
@@ -72,13 +73,10 @@ export function Layout({ children }) {
         <div className="container">{children}</div>
       </main>
 
-      <footer className="footer mt-auto py-3 bg-light">
+      <footer className="footer mt-auto py-3 mt-0 bg-light">
         <div className="container">
           <div className="row">
-            <div
-              className="col-12 col-md text-end mt-4 mt-md-0"
-              style={{ marginRight: "40px" }}
-            >
+            <div className="footer-link-list-col col text-end">
               <ol className="footer-link-list list-inline mb-0">
                 {pathToOtherLanguage && (
                   <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">

@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  .footer-link-list-col {
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 1471px) {
+  .footer-link-list-col {
+    margin-right: 0;
+  }
+}
