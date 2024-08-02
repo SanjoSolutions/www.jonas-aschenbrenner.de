@@ -147,7 +147,7 @@ export function Layout({ children }) {
                     {translations.privacyPolicy}
                   </FooterNavigationItem>
                 </li>
-                <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0 me-md-3">
+                <li className="list-inline-item d-block d-md-inline-block text-center text-md-start me-0">
                   <FooterNavigationItem pageId="credits">
                     {translations.credits}
                   </FooterNavigationItem>
