@@ -9,3 +9,20 @@
     margin-right: 0;
   }
 }
+
+.languages li a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.languages li img {
+  width: 48px;
+  height: 48px;
+}
+
+@media (min-width: 992px) {
+  .languages li img {
+    width: 24px;
+    height: 24px;
+  }
+}
