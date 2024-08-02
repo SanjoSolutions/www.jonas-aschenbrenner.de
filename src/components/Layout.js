@@ -43,7 +43,7 @@ export function Layout({ children }) {
               <li>
                 {language === "en" ? (
                   <Image
-                    src="images/flags/usa.svg"
+                    src="/images/flags/usa.svg"
                     width="24"
                     height="24"
                     alt="English"
@@ -54,7 +54,7 @@ export function Layout({ children }) {
                     title={translations.switchLanguage}
                   >
                     <Image
-                      src="images/flags/usa.svg"
+                      src="/images/flags/usa.svg"
                       width="24"
                       height="24"
                       alt="English"
@@ -65,7 +65,7 @@ export function Layout({ children }) {
               <li className="ms-2">
                 {language === "de" ? (
                   <Image
-                    src="images/flags/de.svg"
+                    src="/images/flags/de.svg"
                     width="24"
                     height="24"
                     alt="Deutsch"
@@ -76,7 +76,7 @@ export function Layout({ children }) {
                     title={translations.switchLanguage}
                   >
                     <Image
-                      src="images/flags/de.svg"
+                      src="/images/flags/de.svg"
                       width="24"
                       height="24"
                       alt="Deutsch"
