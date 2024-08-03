@@ -5,7 +5,9 @@ export function Contact({ className }) {
   return (
     <Link
       href="/contact"
-      className={ classNames("btn", "btn-primary", className) }
-    >Contact</Link>
+      className={classNames("btn", "btn-primary", "btn-lg", className)}
+    >
+      Contact
+    </Link>
   )
 }
