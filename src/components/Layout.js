@@ -50,7 +50,7 @@ export function Layout({ children }) {
                   />
                 ) : (
                   <Link
-                    href={retrievePathToOtherLanguage(pathname)}
+                    href={retrievePathToOtherLanguage(pathname) ?? ""}
                     title={translations.switchLanguage}
                   >
                     <Image
@@ -72,7 +72,7 @@ export function Layout({ children }) {
                   />
                 ) : (
                   <Link
-                    href={retrievePathToOtherLanguage(pathname)}
+                    href={retrievePathToOtherLanguage(pathname) ?? ""}
                     title={translations.switchLanguage}
                   >
                     <Image
