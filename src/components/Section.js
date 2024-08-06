@@ -1,3 +1,3 @@
 export function Section({ children }) {
-  return <div className="py-5">{children}</div>
+  return <div className="py-3 py-md-4">{children}</div>
 }
