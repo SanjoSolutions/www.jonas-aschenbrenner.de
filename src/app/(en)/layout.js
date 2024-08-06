@@ -6,9 +6,8 @@ import { TawkMessenger } from "@/components/TawkMessenger.js"
 import "../../styles.css"
 
 export const metadata = {
-  title:
-    "Sanjo Solutions - Software development with focus on JavaScript, HTML and CSS",
-  description: "Software development with focus on JavaScript, HTML and CSS.",
+  title: "Sanjo Solutions - IT consulting and software development",
+  description: "",
 }
 
 export default function RootLayout({ children }) {
