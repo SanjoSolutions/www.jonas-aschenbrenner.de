@@ -39,7 +39,7 @@ export function Layout({ children }) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="languages navbar-nav flex-row ms-auto mb-2 mb-lg-0">
+            <ul className="languages navbar-nav flex-row ms-auto">
               <li>
                 {language === "en" ? (
                   <Image
@@ -85,7 +85,22 @@ export function Layout({ children }) {
                 )}
               </li>
             </ul>
-            <ul className="navbar-nav ms-lg-3 mb-2 mb-lg-0">
+
+            <ul className="navbar-nav order-first">
+              <li className="nav-item">
+                <NavigationItem pageId="services">
+                  {translations.services}
+                </NavigationItem>
+              </li>
+
+              <li className="nav-item">
+                <NavigationItem pageId="contact">
+                  {translations.contact}
+                </NavigationItem>
+              </li>
+            </ul>
+
+            <ul className="navbar-nav ms-lg-3">
               {process.env.NEXT_PUBLIC_FEATURE_PAGE_BUILDER && (
                 <li className="nav-item">
                   <NavigationItem pageId="page-builder">
@@ -93,16 +108,6 @@ export function Layout({ children }) {
                   </NavigationItem>
                 </li>
               )}
-              <li className="nav-item">
-                <NavigationItem pageId="about">
-                  {translations.about}
-                </NavigationItem>
-              </li>
-              <li className="nav-item">
-                <NavigationItem pageId="contact">
-                  {translations.contact}
-                </NavigationItem>
-              </li>
               <li className="nav-item">
                 <NavigationItem pageId="articles">
                   {translations.articles}
