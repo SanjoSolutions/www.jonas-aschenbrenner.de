@@ -1,7 +1,11 @@
-'use client'
+"use client"
 
-import { DndProvider, useDrag, useDrop } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
+import { DndProvider, useDrag, useDrop } from "react-dnd"
+import { HTML5Backend } from "react-dnd-html5-backend"
+
+export const metadata = {
+  title: "Page Builder",
+}
 
 export default function Page() {
   return (
@@ -18,15 +22,15 @@ export default function Page() {
 function DraggableComponent({ children }) {
   const [{ isDragging }, drag] = useDrag(
     () => ({
-      type: 'component',
+      type: "component",
       item: () => ({
         component: children,
       }),
-      collect: monitor => ({
+      collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
     }),
-    [children]
+    [children],
   )
 
   return (
@@ -39,23 +43,23 @@ function DraggableComponent({ children }) {
 function DroppableArea({ onDrop }) {
   const [{ isOver }, drop] = useDrop(
     () => ({
-      accept: 'component',
-      drop: item => onDrop(item.component),
-      collect: monitor => ({
+      accept: "component",
+      drop: (item) => onDrop(item.component),
+      collect: (monitor) => ({
         isOver: monitor.isOver(),
       }),
     }),
-    [onDrop]
+    [onDrop],
   )
 
   return (
     <div
       ref={drop}
       style={{
-        backgroundColor: isOver ? 'lightgray' : 'white',
+        backgroundColor: isOver ? "lightgray" : "white",
         width: 200,
         height: 200,
-        border: '1px solid black',
+        border: "1px solid black",
       }}
     >
       {/* Render dropped components here */}
