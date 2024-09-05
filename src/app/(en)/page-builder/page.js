@@ -3,10 +3,6 @@
 import { DndProvider, useDrag, useDrop } from "react-dnd"
 import { HTML5Backend } from "react-dnd-html5-backend"
 
-export const metadata = {
-  title: "Page Builder",
-}
-
 export default function Page() {
   return (
     <DndProvider backend={HTML5Backend}>
