@@ -118,6 +118,17 @@ export function Layout({ children }) {
                   {translations.gitHub}
                 </ExternalNavLink>
               </li>
+              <li className="nav-item">
+                <ExternalNavLink href="https://www.linkedin.com/in/jonas-aschenbrenner-aabab01a3/">
+                  <Image
+                    src="/images/linkedin.png"
+                    alt={translations.profileOnLinkedIn}
+                    title={translations.profileOnLinkedIn}
+                    width={24}
+                    height={24}
+                  />
+                </ExternalNavLink>
+              </li>
             </ul>
           </div>
         </div>
