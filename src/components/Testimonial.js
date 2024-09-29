@@ -4,10 +4,10 @@ export function Testimonial({ children, who, position, image }) {
   return (
     <figure className="mb-0">
       <Image {...image} className="mb-2" />
-      <blockquote class="blockquote">
+      <blockquote className="blockquote">
         <p>“{children.props.children}”</p>
       </blockquote>
-      <figcaption class="blockquote-footer mb-0">
+      <figcaption className="blockquote-footer mb-0">
         <cite title={who}>{who}</cite> - {position}
       </figcaption>
     </figure>
