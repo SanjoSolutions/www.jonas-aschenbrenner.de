@@ -39,54 +39,7 @@ export function Layout({ children }) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="languages navbar-nav flex-row ms-auto">
-              <li>
-                {language === "en" ? (
-                  <Image
-                    src="/images/flags/usa.svg"
-                    width="24"
-                    height="24"
-                    alt="English"
-                  />
-                ) : (
-                  <Link
-                    href={retrievePathToOtherLanguage(pathname) ?? ""}
-                    title={translations.switchLanguage}
-                  >
-                    <Image
-                      src="/images/flags/usa.svg"
-                      width="24"
-                      height="24"
-                      alt="English"
-                    />
-                  </Link>
-                )}
-              </li>
-              <li className="ms-2">
-                {language === "de" ? (
-                  <Image
-                    src="/images/flags/de.svg"
-                    width="24"
-                    height="24"
-                    alt="Deutsch"
-                  />
-                ) : (
-                  <Link
-                    href={retrievePathToOtherLanguage(pathname) ?? ""}
-                    title={translations.switchLanguage}
-                  >
-                    <Image
-                      src="/images/flags/de.svg"
-                      width="24"
-                      height="24"
-                      alt="Deutsch"
-                    />
-                  </Link>
-                )}
-              </li>
-            </ul>
-
-            <ul className="navbar-nav order-first">
+            <ul className="navbar-nav">
               <li className="nav-item">
                 <NavigationItem pageId="services">
                   {translations.services}
@@ -100,7 +53,7 @@ export function Layout({ children }) {
               </li>
             </ul>
 
-            <ul className="navbar-nav ms-lg-3">
+            <ul className="navbar-nav ms-auto">
               {process.env.NEXT_PUBLIC_FEATURE_PAGE_BUILDER && (
                 <li className="nav-item">
                   <NavigationItem pageId="page-builder">
@@ -108,24 +61,67 @@ export function Layout({ children }) {
                   </NavigationItem>
                 </li>
               )}
+
               <li className="nav-item">
                 <NavigationItem pageId="articles">
                   {translations.articles}
                 </NavigationItem>
               </li>
+            </ul>
+
+            <ul className="languages navbar-nav ms-lg-3 flex-row">
+              {language !== "en" && (
+                <li>
+                  <Link
+                    href={retrievePathToOtherLanguage(pathname) ?? ""}
+                    title={translations.switchLanguage}
+                  >
+                    <Image
+                      src="/images/flags/usa.svg"
+                      width="24"
+                      height="24"
+                      alt="English"
+                    />
+                  </Link>
+                </li>
+              )}
+              {language !== "de" && (
+                <li>
+                  <Link
+                    href={retrievePathToOtherLanguage(pathname) ?? ""}
+                    title={translations.switchLanguage}
+                  >
+                    <Image
+                      src="/images/flags/de.svg"
+                      width="24"
+                      height="24"
+                      alt="Deutsch"
+                    />
+                  </Link>
+                </li>
+              )}
+            </ul>
+
+            <ul className="profiles navbar-nav ms-lg-3 flex-row">
               <li className="nav-item">
                 <ExternalNavLink href="https://github.com/Sanjo-Solutions">
-                  {translations.gitHub}
+                  <Image
+                    src="/images/github.svg"
+                    alt={translations.profileOnGitHub}
+                    title={translations.profileOnGitHub}
+                    width={48}
+                    height={48}
+                  />
                 </ExternalNavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item ms-3 ms-lg-0">
                 <ExternalNavLink href="https://www.linkedin.com/in/jonas-aschenbrenner-aabab01a3/">
                   <Image
                     src="/images/linkedin.png"
                     alt={translations.profileOnLinkedIn}
                     title={translations.profileOnLinkedIn}
-                    width={24}
-                    height={24}
+                    width={48}
+                    height={48}
                   />
                 </ExternalNavLink>
               </li>
