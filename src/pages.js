@@ -6,9 +6,17 @@ const pages = {
   "page-builder": {
     en: "/page-builder",
   },
+  principles: {
+    en: "/principles",
+    de: "/de/prinzipien",
+  },
   services: {
     en: "/services",
     de: "/de/dienstleistungen",
+  },
+  team: {
+    en: "/team",
+    de: "/de/team",
   },
   articles: {
     en: "/articles",

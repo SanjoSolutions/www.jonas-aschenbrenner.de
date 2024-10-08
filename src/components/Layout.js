@@ -41,6 +41,12 @@ export function Layout({ children }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item">
+                <NavigationItem pageId="principles">
+                  {translations.principles}
+                </NavigationItem>
+              </li>
+
+              <li className="nav-item">
                 <NavigationItem pageId="services">
                   {translations.services}
                 </NavigationItem>
@@ -49,6 +55,12 @@ export function Layout({ children }) {
               <li className="nav-item">
                 <NavigationItem pageId="contact">
                   {translations.contact}
+                </NavigationItem>
+              </li>
+
+              <li className="nav-item">
+                <NavigationItem pageId="team">
+                  {translations.team}
                 </NavigationItem>
               </li>
             </ul>
