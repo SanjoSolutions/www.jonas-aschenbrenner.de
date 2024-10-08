@@ -22,7 +22,7 @@ export function Layout({ children }) {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div className="container">
           <a className="navbar-brand" href={usePathForPageId("homepage")}>
             Sanjo Solutions
@@ -118,7 +118,7 @@ export function Layout({ children }) {
               <li className="nav-item">
                 <ExternalNavLink href="https://github.com/Sanjo-Solutions">
                   <Image
-                    src="/images/github.svg"
+                    src="/images/github-mark-white.svg"
                     alt={translations.profileOnGitHub}
                     title={translations.profileOnGitHub}
                     width={48}
@@ -129,7 +129,7 @@ export function Layout({ children }) {
               <li className="nav-item ms-3 ms-lg-0">
                 <ExternalNavLink href="https://www.linkedin.com/in/jonas-aschenbrenner-aabab01a3/">
                   <Image
-                    src="/images/linkedin.png"
+                    src="/images/In-White-48.png"
                     alt={translations.profileOnLinkedIn}
                     title={translations.profileOnLinkedIn}
                     width={48}

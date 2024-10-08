@@ -1,3 +1,17 @@
 $primary: #0066cc;
+$navbar-dark-icon-color: white;
 
 @import "bootstrap/scss/bootstrap";
+
+.navbar-nav {
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: hsl(0 0% 96% / 1);
+}
+
+.navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: white;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 500;
+}
