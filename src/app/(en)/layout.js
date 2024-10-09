@@ -1,9 +1,9 @@
-import "../../custom.scss"
+import "@/custom.scss"
 import "@/bootstrap.js"
 import { Layout } from "@/components/Layout.js"
 import "highlight.js/styles/github.css"
 import { TawkMessenger } from "@/components/TawkMessenger.js"
-import "../../styles.css"
+import "@/styles.css"
 
 export const metadata = {
   title: "IT consulting and software development",

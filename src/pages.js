@@ -1,49 +1,49 @@
 const pages = {
   homepage: {
-    en: "/",
-    de: "/de",
+    en: "/en",
+    de: "/",
   },
   "page-builder": {
-    en: "/page-builder",
+    en: "/en/page-builder",
   },
   principles: {
-    en: "/principles",
-    de: "/de/prinzipien",
+    en: "/en/principles",
+    de: "/prinzipien",
   },
   services: {
-    en: "/services",
-    de: "/de/dienstleistungen",
+    en: "/en/services",
+    de: "/dienstleistungen",
   },
   team: {
-    en: "/team",
-    de: "/de/team",
+    en: "/en/team",
+    de: "/team",
   },
   articles: {
-    en: "/articles",
-    de: "/de/artikel",
+    en: "/en/articles",
+    de: "/artikel",
   },
   contact: {
-    en: "/contact",
-    de: "/de/kontaktieren",
+    en: "/en/contact",
+    de: "/kontaktieren",
   },
   imprint: {
-    en: "/imprint",
-    de: "/de/impressum",
+    en: "/en/imprint",
+    de: "/impressum",
   },
   "privacy-policy": {
-    en: "/privacy-policy",
-    de: "/de/datenschutzerklaerung",
+    en: "/en/privacy-policy",
+    de: "/datenschutzerklaerung",
   },
   "benefits-of-developing-with-javascript": {
-    en: "/benefits-of-developing-with-javascript",
-    de: "/de/vorteile-mit-javascript-zu-entwickeln",
+    en: "/en/benefits-of-developing-with-javascript",
+    de: "/vorteile-mit-javascript-zu-entwickeln",
   },
   "how-to-install-rsync-into-git-bash": {
-    en: "/how-to-install-rsync-into-git-bash",
+    en: "/en/how-to-install-rsync-into-git-bash",
   },
   credits: {
-    en: "/credits",
-    de: "/de/credits",
+    en: "/en/credits",
+    de: "/credits",
   },
 }
 
