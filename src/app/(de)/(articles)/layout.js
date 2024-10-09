@@ -1,1 +1,1 @@
-export { default } from "@/app/(en)/(articles)/layout.js"
+export { default } from "@/app/(en)/en/(articles)/layout.js"
