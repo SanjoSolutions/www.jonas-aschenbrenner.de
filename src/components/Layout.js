@@ -57,12 +57,6 @@ export function Layout({ children }) {
                   {translations.contact}
                 </NavigationItem>
               </li>
-
-              <li className="nav-item">
-                <NavigationItem pageId="team">
-                  {translations.team}
-                </NavigationItem>
-              </li>
             </ul>
 
             <ul className="navbar-nav ms-auto">

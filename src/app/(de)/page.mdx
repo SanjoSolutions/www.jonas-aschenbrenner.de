@@ -2,22 +2,29 @@ import { Kontaktieren } from "@/components/Kontaktieren.js"
 import { Testimonial } from "@/components/Testimonial.js"
 import Image from "next/image"
 import { Section } from "@/components/Section.js"
-import { FirstHeader } from "@/components/FirstHeader.js"
 import Link from "next/link.js"
-
-<FirstHeader>IT-Beratung und Softwareentwicklung</FirstHeader>
+import { TextSection } from "@/components/TextSection.js"
 
 <Section>
-  <div className="clearfix">
-    <Image src="/images/jonas.png" width={281} height={281} className="mb-2 mb-md-0 float-md-start me-md-2" />
+    <div className="row">
+    <div className="col-auto">
+    <Image src="/images/jonas.png" width={281} height={281} className="mb-2 mb-md-0" />
+</div>
+<div className="col">
+<TextSection>
+<hgroup>
+## Jonas Aschenbrenner
 
-    <Kontaktieren />
+<p className="h5">Softwareentwickler und IT-Berater</p>
 
-    <br />
+</hgroup>
 
-    <Link className="btn btn-secondary btn-lg mt-2" href="/CV_Jonas_Aschenbrenner.pdf">Lebenslauf</Link>
+<Kontaktieren />
 
+</TextSection>
+</div>
   </div>
+
 </Section>
 
 <Section>

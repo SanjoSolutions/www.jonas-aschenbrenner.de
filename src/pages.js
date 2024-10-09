@@ -14,10 +14,6 @@ const pages = {
     en: "/en/services",
     de: "/dienstleistungen",
   },
-  team: {
-    en: "/en/team",
-    de: "/team",
-  },
   articles: {
     en: "/en/articles",
     de: "/artikel",
