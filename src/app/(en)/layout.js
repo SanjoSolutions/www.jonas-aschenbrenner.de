@@ -6,7 +6,7 @@ import { TawkMessenger } from "@/components/TawkMessenger.js"
 import "@/styles.css"
 
 export const metadata = {
-  title: "IT consulting and software development",
+  title: "Jonas Aschenbrenner - IT consulting and software development",
   description: "",
 }
 
