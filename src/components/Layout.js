@@ -25,7 +25,7 @@ export function Layout({ children }) {
       <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div className="container">
           <a className="navbar-brand" href={usePathForPageId("homepage")}>
-            Sanjo Solutions
+            Jonas Aschenbrenner
           </a>
           <button
             className="navbar-toggler"
@@ -116,7 +116,7 @@ export function Layout({ children }) {
 
             <ul className="profiles navbar-nav ms-lg-3 flex-row">
               <li className="nav-item">
-                <ExternalNavLink href="https://github.com/Sanjo-Solutions">
+                <ExternalNavLink href="https://github.com/SanjoSolutions">
                   <Image
                     src="/images/github-mark-white.svg"
                     alt={translations.profileOnGitHub}

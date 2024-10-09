@@ -6,7 +6,7 @@ import { FirstHeader } from "../../FirstHeader.js"
 
 const localStorageKey = "contact-form"
 const backendUrl = "/api/process-contact-request"
-const receiverEmail = "jonas@sanjo-solutions.com"
+const receiverEmail = "jonas.aschenbrenner@gmail.com"
 
 export default function Contact() {
   const translations = useTranslations("contact")
@@ -125,8 +125,8 @@ export default function Contact() {
       <h2>{translations.viaEmail}</h2>
 
       <p>
-        <a href="mailto:jonas@sanjo-solutions.com" target="_blank">
-          jonas@sanjo-solutions.com
+        <a href="mailto:jonas.aschenbrenner@gmail.com" target="_blank">
+          jonas.aschenbrenner@gmail.com
         </a>
       </p>
 
@@ -150,10 +150,10 @@ export default function Contact() {
           (
           <a
             id="mail-to"
-            href="mailto:jonas@sanjo-solutions.com"
+            href="mailto:jonas.aschenbrenner@gmail.com"
             target="_blank"
           >
-            jonas@sanjo-solutions.com
+            jonas.aschenbrenner@gmail.com
           </a>
           ). {translations.sorryForTheInconvenience}
         </div>

@@ -9,7 +9,7 @@ export async function POST(request) {
 
   const command = new SendEmailCommand({
     Destination: {
-      ToAddresses: ["jonas@sanjo-solutions.com"],
+      ToAddresses: ["jonas.aschenbrenner@gmail.com"],
     },
     Message: {
       Body: {
@@ -18,10 +18,8 @@ export async function POST(request) {
 
       Subject: { Data: body.subject },
     },
-    Source: "jonas@sanjo-solutions.com",
-    ReplyToAddresses: [
-      body.email,
-    ],
+    Source: "jonas.aschenbrenner@gmail.com",
+    ReplyToAddresses: [body.email],
   })
 
   await ses.send(command)
