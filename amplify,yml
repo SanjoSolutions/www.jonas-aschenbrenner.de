@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - echo "AWS_ACCESS_KEY_ID=$NEXT_AWS_ACCESS_KEY_ID" >> .env.production
+        - echo "AWS_SECRET_ACCESS_KEY=$NEXT_AWS_SECRET_ACCESS_KEY" >> .env.production
+        - echo "AWS_DEFAULT_REGION=$NEXT_AWS_DEFAULT_REGION" >> .env.production
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
