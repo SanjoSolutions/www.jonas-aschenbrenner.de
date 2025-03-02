@@ -4,7 +4,7 @@ import Link from "next/link.js"
 export function Kontaktieren({ className }) {
   return (
     <Link
-      href="/de/kontaktieren"
+      href="/kontaktieren"
       className={classNames("btn", "btn-primary", "btn-lg", className)}
     >
       Kontaktieren
